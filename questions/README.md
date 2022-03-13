@@ -36,10 +36,10 @@ with user_order_count as (
 purchase_cats as (
   select 
     case
-    when count = 1 then 'One Purchase' 
-  	when count = 2 then 'Two Purchases' 
-    else 'Three+ Purchases' 
-  	end as categories 
+    when count = 1 then 'One Purchase'
+	when count = 2 then 'Two Purchases' 
+	else 'Three+ Purchases'
+	end as categories 
   from 
     user_order_count
 )
