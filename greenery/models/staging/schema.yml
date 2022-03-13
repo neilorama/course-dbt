@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: stg_addresses
+    description: Details about the user's addresses
+    columns:
+      - name: address_id
+        description: unique address identifier
+        tests:
+          - unique
+          - not_null
+  - name: stg_events
+    description: Events logs for a given user. There can be multiple events for a given session_id
+    columns:
+      - name: event_id
+        tests: 
+          - unique
+          - not_null
+  - name: stg_users
+    description: Details about users.
+    columns:
+      - name: user_id
+        tests: 
+          - unique
+          - not_null
+  - name: stg_order_items
+    description: Details for a given for a given order, there can be multiple order_items per order.
+    columns:
+      - name: order_id
+        tests: 
+          - not_null
+  - name: stg_orders
+    description: Details about orders.
+    columns:
+      - name: order_id
+        tests: 
+          - unique
+          - not_null
+  - name: stg_products
+    description: Details about products.
+    columns:
+      - name: product_id
+        tests: 
+          - unique
+          - not_null
+  - name: stg_promos
+    description: Details about promos applied to an order.
+    columns:
+      - name: promo_id
+        tests: 
+          - unique
+          - not_null
