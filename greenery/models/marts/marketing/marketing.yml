@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: fct_user_orders
+    description: users order related data
+
+    columns:  
+      - name: first_name
+        description: users first name
+        tests:
+          - not_null
+    
+      - name: last_name
+        description: users last name
+        tests:
+          - not_null
+
+      - name: email
+        description: users email
+        tests:
+          - not_null
+  
+      - name: phone_number
+        description: users phone number
+        tests:
+          - not_null
+
+      - name: created_at
+        description: created_at date utc
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: updated_at date utc
+        tests:
+          - not_null
+      
+      - name: address_id
+        description: address unique identifier
+        tests:
+          - not_null
+
+      - name: order_count
+        description: users order count
+
+      - name: first_order_date
+        description: Users first order date
+
+      - name: last_order_date
+        description: Users last order date
+
+      - name: days_since_last_order
+        description: days from today since last order
+
+      - name: total_order_spend
+        description: users total order spend
+
+      - name: avg_delivery_time
+        description: users avg delivery time
+
+      - name: aov
+        description: users average order value

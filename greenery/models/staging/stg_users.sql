@@ -1,3 +1,9 @@
+{{
+  config(
+    materialized='table'
+  )
+}}
+
 select 
     user_id,
     initcap(trim(first_name)) as first_name,
