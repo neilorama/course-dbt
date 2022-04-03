@@ -4,14 +4,18 @@
   )
 }}
 
-select
+with stg_events as (
+  select *
+  from {{ ref('stg_events') }}
+)
+
+select 
     event_id,
     session_id,
     user_id,
+    event_type,
     page_url,
     created_at,
-    event_type,
     order_id,
     product_id
-
-from {{ source('greenery', 'events')}}
+from stg_events

@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: fct_events
+    description: important events for greenery
+    columns:
+      - name: user_sessions_with_checkout
+        description: count of sessions with a checkout event
+
+      - name: user_sessions_without_checkout
+        description: count of sessions without a checkout
+
+      - name: user_sessions_abandoned_cart
+        description: count of sessions that abandoned cart
+  
+  - name: fct_user_events
+    description: has user session metrics on different events
+    columns:
+      - name: user_id
+        description: user id associated to events
+        tests:
+          - not_null
+  
+      - name: first_name
+        description: users first name
+        tests:
+          - not_null
+    
+      - name: last_name
+        description: users last name
+        tests:
+          - not_null
+  
+      - name: phone_number
+        description: users phone number
+        tests:
+          - not_null
+      
+      - name: email
+        description: users email
+        tests:
+          - not_null
+      
+      - name: page_view_count
+        description: Number of page views in the users session
+        tests:
+          - not_null
+
+      - name: add_to_cart_count
+        description: Number of add to cart actions in the users session
+        tests:
+          - not_null
+
+      - name: checkout_count
+        description: Number of checkout actions in the users session
+        tests:
+          - not_null
+
+      - name: package_shipped _count
+        description: Number of package shipped actions in the users session
