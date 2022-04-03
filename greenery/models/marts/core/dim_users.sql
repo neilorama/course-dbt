@@ -14,6 +14,7 @@ order_metrics
      )
 
 select
+  c.user_id,
   c.first_name,
   c.last_name,
   c.email,
