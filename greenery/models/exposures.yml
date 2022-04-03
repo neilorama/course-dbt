@@ -1,0 +1,13 @@
+exposures:
+  
+  - name: Product Funnel Dashboard
+    type: dashboard
+    maturity: high
+    description: >
+      Conversion Funnel for Product.
+    
+    depends_on:
+      - ref('fct_product_funnel')
+      
+    owner:
+      name: Neil Mullins
